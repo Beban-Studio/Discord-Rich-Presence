@@ -13,7 +13,7 @@ client.on("ready", async () => {
   console.log(colors.blue(`┏╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾┓\n┃         </> All rights reserved to Beban Community           ┃\n┃    *Please respect our work by not removing the credits      ┃\n┗╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾┛`));
   console.log(`Succesfully logged in as ${colors.rainbow(`[${client.user.tag}]`)}`);
 
-  const RPC = new Discord.RichPresence()
+  const RPC = new Discord.RichPresence(client)
     .setApplicationId(config.rich_presence.application_id)
     .setType(config.rich_presence.presence_type)
     .setURL(config.rich_presence.stream_url)
@@ -27,8 +27,7 @@ client.on("ready", async () => {
     .addButton(config.buttons.Button1_name, config.buttons.Button1_url)
     .addButton(config.buttons.Button2_name, config.buttons.Button2_url);
 
-  client.user.setActivity(RPC);
-  client.user.setPresence({ status: config.rich_presence.activity_presence });
+  client.user.setPresence({ activities: [RPC] });
 });
 
 client.login(config.client.token);
