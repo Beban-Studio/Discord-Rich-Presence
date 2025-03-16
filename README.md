@@ -1,3 +1,4 @@
+# Will be overhauled on 2025
 <img src="Simple Rich Presence.svg" />
 
 ---
