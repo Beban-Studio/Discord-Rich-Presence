@@ -7,7 +7,6 @@ const client = new Discord.Client({
   checkUpdate: false,
 });
 
-console.log(loadConfig)
 function validateConfig(loadConfig) {
     const requiredFields = [
         'clientOptions.token',
