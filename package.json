@@ -1,6 +1,6 @@
 {
-  "name": "simple-rich-presence",
-  "version": "1.0.0",
+  "name": "discord-rich-presence",
+  "version": "1.0.1",
   "description": "A simple discord selfbot to give your account a rich presence.",
   "main": "index.js",
   "scripts": {
@@ -11,9 +11,7 @@
   "dependencies": {
     "@types/node": "^18.0.6",
     "colors": "^1.4.0",
-    "discord.js-selfbot-v13": "^3.6.0",
-    "dotenv": "^16.4.5",
-    "express": "^4.18.2",
-    "node-fetch": "^3.2.6"
+    "discord.js-selfbot-v13": "^3.6.1",
+    "dotenv": "^16.4.5"
   }
 }
